@@ -1,5 +1,5 @@
-import { Page } from 'playwright';
-import { BaseActions } from '../actions/base.actions';
+import { Page } from "playwright";
+import { BaseActions } from "../actions/base.actions";
 
 export abstract class BasePage {
   readonly actions: BaseActions;
@@ -10,7 +10,7 @@ export abstract class BasePage {
   }
 
   async navigate(): Promise<void> {
-    console.log(this.url)
+    console.log(this.url);
     await this.page.goto(this.url);
     await this.verifyPageLoaded();
   }

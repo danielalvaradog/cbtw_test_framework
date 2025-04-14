@@ -1,4 +1,4 @@
-import { Page, Locator } from 'playwright';
+import { Page, Locator } from "playwright";
 
 export class BaseActions {
   constructor(protected page: Page) {}
@@ -29,6 +29,8 @@ export class BaseActions {
   }
 
   async takeScreenshot(name: string): Promise<void> {
-    await this.page.screenshot({ path: `screenshots/${name.replace(/\s+/g, '_')}.png` });
+    await this.page.screenshot({
+      path: `screenshots/${name.replace(/\s+/g, "_")}.png`,
+    });
   }
 }

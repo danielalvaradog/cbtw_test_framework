@@ -13,7 +13,7 @@ Feature: Sauce Demo cart
     When I add "<product>" product to the cart
     And I continue to the cart
     Then I should be in the cart page
-    And I should see the "<product>" in the cart list
+    And I should see the product in the cart list
 
     Examples:
       | product                           |
